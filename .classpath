@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/seetasomagani/voltdb/voltdb/voltdb-6.9.jar"/>
+	<classpathentry kind="lib" path="/Users/seetasomagani/voltdb/voltdb/voltdbclient-6.9.jar"/>
+	<classpathentry kind="lib" path="lib/core-0.12.0.jar"/>
+	<classpathentry kind="output" path="obj"/>
+</classpath>

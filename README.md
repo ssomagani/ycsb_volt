@@ -1,6 +1,6 @@
-# VoltDB Binding for YCSB
+# Updated YCSB code to run on VoltDB
 
-This section describes the changes that were made to the original code specifically with respect to running Workload E.
+This section describes the changes that were made to the original code specifically with respect to running WorkloadE.
 
 Client
 -------------------
@@ -23,6 +23,8 @@ Deployment File
 Updated the deployment to turn off durability for better performance.
 
 Original documentation below ----
+
+# VoltDB Binding for YCSB
 
 This section describes how to run YCSB (Yahoo Cloud Serving Benchmark) on VoltDB.
 

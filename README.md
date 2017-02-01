@@ -1,5 +1,29 @@
 # VoltDB Binding for YCSB
 
+This section describes the changes that were made to the original code specifically with respect to running Workload E.
+
+Client
+-------------------
+		com.yahoo.ycsb.db.VoltClient4.java
+Updated Scan method to use callAllPartitionProcedure to scatter-gather the results instead of synchronous calls.
+
+Stored Procedure
+-------------------
+		com.procedures.Scan.java
+Moved partKey parameter to be the first in the list of parameters since callAllPartitionProcedure() method requires that the partition key be the first parameter in the stored procedure's signature. Note that we do not have to pass this parameter explicity. VoltDB client automatically passes an appropriate dummy value to route requests correctly to all the partitions.
+
+Run Script
+-------------------
+		run.sh
+Updated the server() function to use the new VoltDB CLI that requires separate 'init' and 'start' verbs in place of the old 'create' verb.
+
+Deployment File
+-------------------
+		deployment.xml
+Updated the deployment to turn off durability for better performance.
+
+Original documentation below ----
+
 This section describes how to run YCSB (Yahoo Cloud Serving Benchmark) on VoltDB.
 
 Set Up YCSB

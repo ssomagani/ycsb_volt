@@ -65,7 +65,7 @@ function jars() {
 function server() {
     # run the server
     $VOLTDB init -f -C deployment.xml
-    $VOLTDB create -d deployment.xml -l $LICENSE -H $HOST
+    $VOLTDB start -H $HOST
 }
 
 # load schema and procedures
